@@ -242,13 +242,15 @@ public final class Filter extends ContainerNode {
             return effectiveFilterArea;
         }
 
-        @NotNull LayoutBounds.Data inputLayout(@NotNull FilterPrimitive filterPrimitive) {
+        @NotNull
+        LayoutBounds.Data inputLayout(@NotNull FilterPrimitive filterPrimitive) {
             LayoutBounds.Data inputLayout = inputLayouts.get(filterPrimitive);
             if (inputLayout == null) throw new IllegalFilterStateException("Input layout not found.");
             return inputLayout;
         }
 
-        @NotNull LayoutBounds.Data outputLayout(@NotNull FilterPrimitive filterPrimitive) {
+        @NotNull
+        LayoutBounds.Data outputLayout(@NotNull FilterPrimitive filterPrimitive) {
             LayoutBounds.Data outputLayout = outputLayouts.get(filterPrimitive);
             if (outputLayout == null) throw new IllegalFilterStateException("Output layout not found.");
             return outputLayout;
@@ -285,11 +287,13 @@ public final class Filter extends ContainerNode {
             return filterLayout.elementBounds();
         }
 
-        @NotNull LayoutBounds.Data inputLayout(@NotNull FilterPrimitive filterPrimitive) {
+        @NotNull
+        LayoutBounds.Data inputLayout(@NotNull FilterPrimitive filterPrimitive) {
             return filterLayout.inputLayout(filterPrimitive);
         }
 
-        @NotNull LayoutBounds.Data outputLayout(@NotNull FilterPrimitive filterPrimitive) {
+        @NotNull
+        LayoutBounds.Data outputLayout(@NotNull FilterPrimitive filterPrimitive) {
             return filterLayout.outputLayout(filterPrimitive);
         }
 
